@@ -7,7 +7,7 @@ A equipe responsável pelo projeto:
 - F
 
 - G
-- N
+- [Nathalia](https://github.com/FaveroNath)
 - Th
 - [Tiago Higa](https://github.com/tiagohiga)
 - To
