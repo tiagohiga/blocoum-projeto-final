@@ -4,8 +4,7 @@ Projeto final realizado durante o primeiro bloco do bootcamp de desenvolvedor j√
 
 A equipe respons√°vel pelo projeto: 
 
-- F
-
+- [Fabiana de Oliveira](https://github.com/Tavarina)
 - G
 - [Nathalia](https://github.com/FaveroNath)
 - Th
