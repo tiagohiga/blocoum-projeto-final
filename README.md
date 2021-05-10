@@ -10,4 +10,4 @@ A equipe responsável pelo projeto:
 - N
 - Th
 - [Tiago Higa](https://github.com/tiagohiga)
-- To
+- [Tokunbo](https://github.com/Tokunbo21)
