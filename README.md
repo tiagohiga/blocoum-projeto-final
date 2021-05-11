@@ -9,5 +9,4 @@ A equipe responsável pelo projeto:
 - [Nathalia](https://github.com/FaveroNath)
 - Th
 - [Tiago Higa](https://github.com/tiagohiga)
-<<<<<<< HEAD
 - [Tokunbo](https://github.com/Tokunbo21)
