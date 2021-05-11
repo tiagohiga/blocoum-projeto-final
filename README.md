@@ -7,7 +7,7 @@ A equipe responsável pelo projeto:
 - [Fabiana de Oliveira](https://github.com/Tavarina)
 - [Gabriel Cerdeira](https://github.com/gabrgcr)
 - [Nathalia](https://github.com/FaveroNath)
-- Th
+- [Thiago Ramaldes](https://github.com/tramaldes)
 - [Tiago Higa](https://github.com/tiagohiga)
 - [Tokunbo](https://github.com/Tokunbo21)
 
