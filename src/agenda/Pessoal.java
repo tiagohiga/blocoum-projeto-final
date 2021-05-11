@@ -1,4 +1,4 @@
-package agendapessoal;
+package agenda;
 
 public class Pessoal {
 	private int idade;
@@ -37,7 +37,4 @@ public class Pessoal {
 		this.redesocial = redesocial;
 	}
 	
-	
-	
-
 }
