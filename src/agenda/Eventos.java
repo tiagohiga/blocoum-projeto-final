@@ -1,29 +1,24 @@
 package agenda;
 
-public class Eventos {
+public class Eventos extends Contato{
 	private int duracao;
 	private int horario;
 	private String tema;
 	private String descricao;
 	
 	//Criação do método construtor
-	public Eventos(int duracao, int horario, String tema, String descricao) {
-		
-		//Chamada dos atributos exclusivos da classe Evento
-		this.duracao = duracao;
-		this.horario = horario;
-		this.tema = tema;
-		this.descricao = descricao;
+	public Eventos(String nome, String endereco, int duracao, int horario) {
+		super(nome, endereco);
 	}
 	
-	//Método para realizarmos o cadastro de um novo evento na agenda - Aguardando aula de Polimorfismo
-	public void cadastrarEvento() {
-		
+	@Override
+	public void cadastrarContato() {
+		//Cadastrar
 	}
 	
-	//Método para exibição do evento cadastrado - Aguardando aula de Polimorfismo
-	public void exibirEvento(String nomeEvento) {
-		
+	@Override
+	public void visualizarContato() {
+		//Visualizar
 	}
 	
 	//Método para formatar a data. Como receberemos um inteiro, podemos utilizar o método
@@ -40,7 +35,7 @@ public class Eventos {
 		return dataFormatada;
 	}*/
 	
-	//Getters e Setters do atributos da classe Evento
+	//Getters e Setters dos atributos da classe Evento
 	public int getDuracao() {
 		return duracao;
 	}

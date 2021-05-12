@@ -2,19 +2,19 @@ package agenda;
 
 import java.text.NumberFormat;
 
-public class ContatoProfissional extends Contato {
+public class ContatoProfissional {
 	private String cargo;
 	private double salario;
 	private String setor;
 	private String nomeEmpresa;
 	
-	public ContatoProfissional(String nome, String sobrenome, String telefone, String email, String endereco, String cargo, double salario, String setor, String nomeEmpresa ) {
+	/*public ContatoProfissional(String nome, String sobrenome, String telefone, String email, String endereco, String cargo, double salario, String setor, String nomeEmpresa ) {
 		super(nome, sobrenome, telefone, email, endereco);
 		this.cargo = cargo;
 		this.salario = salario;
 		this.setor = setor;
 		this.nomeEmpresa = nomeEmpresa;
-	}
+	}*/
 	
 	public void visualizarContatoProfissional() {
 		System.out.printf("Cargo: %s\n Setor: %s\nNome Empresa: %s\n", cargo, setor, nomeEmpresa);
