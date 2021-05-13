@@ -4,30 +4,30 @@ import java.util.*;
 public abstract class Contato {
 	Scanner in = new Scanner(System.in);
 	
-	private String nome;
-	private String sobrenome;
-	private String telefone;
-	private String email;
-	private String endereco;
-	abstract public void cadastrarContato();
-	abstract public void visualizarContato();
+	protected String nome;
+	protected String sobrenome;
+	protected String tipo;
+	protected String telefone;
+	protected String email;
+	protected String endereco;
+	protected int id;
+	
+	abstract public void setContato();
+	abstract public void getContato();
 
 	//buscarContato
 	//excluirContato
 	//definir tipo Date
 	
-	/*public Contato(String nome, String sobrenome, String telefone, String email, String endereco) {
+	//Sigestões: bloquearContato, favoritarContanto
+	
+	public Contato(String nome, String telefone) {
 		
 		super();
-		this.nome = nome;
-		this.sobrenome = sobrenome;
-		this.telefone = telefone;
-		this.email = email;
-		this.endereco = endereco;
 		
-	}*/
+	}
 	
-	public Contato(String nome, String endereco) {
+	public Contato(String nome, String endereco, String email, String telefone, String tipo) {
 		
 		super();
 		this.nome = nome;
@@ -59,6 +59,13 @@ public abstract class Contato {
 		setTelefone(telefone);
 	}
 
+	public void verificaString(String nome) {
+		while(nome.isEmpty()) {
+			System.out.println("Este campo está vázio, por favro digite algo!!!!");
+			nome = in.nextLine();
+		}
+		setNome(nome);
+	}
 	
 	//Criar Metodo verificaData 
 	
