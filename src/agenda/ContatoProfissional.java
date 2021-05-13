@@ -2,22 +2,31 @@ package agenda;
 
 import java.text.NumberFormat;
 
-public class ContatoProfissional {
+public class ContatoProfissional extends Contato {
+	
+
 	private String cargo;
 	private double salario;
 	private String setor;
 	private String nomeEmpresa;
 	
-	/*public ContatoProfissional(String nome, String sobrenome, String telefone, String email, String endereco, String cargo, double salario, String setor, String nomeEmpresa ) {
-		super(nome, sobrenome, telefone, email, endereco);
-		this.cargo = cargo;
-		this.salario = salario;
-		this.setor = setor;
-		this.nomeEmpresa = nomeEmpresa;
-	}*/
+
+	public ContatoProfissional(String nome, String telefone) {
+		super(nome, telefone);
+		// TODO Auto-generated constructor stub
+	}
 	
-	public void visualizarContatoProfissional() {
-		System.out.printf("Cargo: %s\n Setor: %s\nNome Empresa: %s\n", cargo, setor, nomeEmpresa);
+	@Override
+	public void getContato() {
+		String nomeCompleto = nome + sobrenome;
+		System.out.printf("Nome: %s\nTelefone: %s\nE-mail:" + " %s\nEndereço: %s\nCargo: "
+				+ "%s\nSalário: %f\nSetor: %s\nNome Empresa: "
+				+ " %s",nomeCompleto,telefone,email,endereco,cargo,salario,setor,nomeEmpresa);
+	}
+	
+	@Override 
+	public void setContato() {
+		
 	}
 	
 	public String formataSalario() {

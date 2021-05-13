@@ -1,31 +1,39 @@
 package agenda;
 
-public class Eventos extends Contato{
+public class Eventos extends Contato {
 	private int duracao;
 	private int horario;
 	private String tema;
 	private String descricao;
 	
-	//CriaÃ§Ã£o do mÃ©todo construtor
-	public Eventos(String nome, String endereco, int duracao, int horario) {
-		super(nome, endereco);
+	//Criação do método construtor
+	public Eventos(String nome, String endereco, String email, String telefone, String tipo, int duracao, int horario, String tema, String descricao) {
+		super(nome,endereco, email, telefone, tipo);
+		//Chamada dos atributos exclusivos da classe Evento
+		this.duracao = duracao;
+		this.horario = horario;
+		this.tema = tema;
+		this.descricao = descricao;
 	}
 	
+	
+	//Método para realizarmos o cadastro de um novo evento na agenda - Aguardando aula de Polimorfismo
 	@Override
-	public void cadastrarContato() {
-		//Cadastrar
+	public void setContato() {
+		
 	}
 	
+	//Método para exibição do evento cadastrado - Aguardando aula de Polimorfismo
 	@Override
-	public void visualizarContato() {
-		//Visualizar
+	public void getContato() {
+		
 	}
 	
-	//MÃ©todo para formatar a data. Como receberemos um inteiro, podemos utilizar o mÃ©todo
-	//abaixo para formatar e exibir a data em um formato especÃ­fico.
-	//O mÃ©todo pega o valor do atributo 'data' e atravÃ©s de algumas operaÃ§Ãµes
-	//atribuÃ­mos, para cada variÃ¡vel (ano, mÃªs e dia) seu valor conforme a data que foi 
-	//informada. Posteriormente, formatamos a data conforme padrÃ£o dd/mm/aaaa.
+	//Método para formatar a data. Como receberemos um inteiro, podemos utilizar o método
+	//abaixo para formatar e exibir a data em um formato específico.
+	//O método pega o valor do atributo 'data' e através de algumas operações
+	//atribuímos, para cada variável (ano, mês e dia) seu valor conforme a data que foi 
+	//informada. Posteriormente, formatamos a data conforme padrão dd/mm/aaaa.
 	/*public String formatarData() {
 		int dia, mes, ano;
 		ano = data % 10000;
@@ -35,7 +43,7 @@ public class Eventos extends Contato{
 		return dataFormatada;
 	}*/
 	
-	//Getters e Setters dos atributos da classe Evento
+	//Getters e Setters do atributos da classe Evento
 	public int getDuracao() {
 		return duracao;
 	}
@@ -67,5 +75,4 @@ public class Eventos extends Contato{
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
 }

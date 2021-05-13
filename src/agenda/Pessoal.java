@@ -1,6 +1,8 @@
 package agenda;
+import java.util.*;
 
-public class Pessoal extends Contato{
+public class Pessoal extends Contato {
+	Scanner in = new Scanner(System.in);
 	private int idade;
 	private String sexo;
 	private String redesocial;
@@ -12,22 +14,27 @@ public class Pessoal extends Contato{
 		this.redesocial = redesocial;
 	}
 
-	public void cadastroPessoal(){
+	@Override
+	public void setContato(){
 
 	}
-
-	public void visualizaPessoal(String nome, String sobrenome, String telefone, String email, String endereco, int idade, String sexo, String redesocial){
-		System.out.printf("Nome: %s %s\nTelefone: %s\nE-mail: %s\nEndereço: %s\nIdade: %d\nSexo: %s\nRede Social: %s",nome,sobrenome,telefone,email,endereco,idade,sexo,redesocial);
+	@Override
+	public void getContato(){
+		String nomeCompleto = nome + sobrenome;
+		
+		System.out.printf("Nome: %s\nTelefone: %s\nE-mail: %s\nEndereço: "
+				+ "%s\nIdade: %d\nSexo: %s\nRede "
+				+ "Social: %s",nomeCompleto, telefone,email,endereco,idade,sexo,redesocial);
 	}
 	
 	public void verificaIdade() {
-		idade = in.nextLine();
-		while(idade<0 || idade>110)
+		idade = in.nextInt();
+		while(idade<=0 || idade>110)
 		{
-			System.out.printf("\IDADE INVÁLIDA! Insira novamente!");
-			idade = in.nextLine();
+			System.out.printf("\nIDADE INVÁLIDA! Insira novamente!");
+			idade = in.nextInt();
 		}
-		setIdade();
+		setIdade(idade);
 	}
 	
 	public void verificaRS(String redesocial) {
@@ -35,11 +42,10 @@ public class Pessoal extends Contato{
 		while(validaRS == -1) {
 			System.out.println("***********\nRede Social inválida, insira um site!\n***************");
 			redesocial = in.nextLine();
-			redesocial = redesocial.indexOf(".");
+			validaRS = redesocial.indexOf(".");
 		}
 		setRedesocial(redesocial);
 	}
-	
 	
 	
 	public int getIdade() {
