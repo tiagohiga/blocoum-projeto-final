@@ -38,7 +38,7 @@ public class Eventos extends Contato{
 		//Visualizar
 		System.out.printf("O evento %s acontecerá em data, localizado na %s ", getNome(), getEndereco());
 		System.out.printf("\no evento tem previsão de início para as %s com duração esperada de %d hora(s).", formatarHora(getHorario()), this.getDuracao());
-		System.out.printf("\nLembre-se que '%s' e o %s", this.getDescricao(), validarTema(this.getTema()));
+		System.out.printf("\nLembre-se que '%s' e o tema %s", this.getDescricao(), validarTema(this.getTema()));
 	}
 	
 	public String validarTema(String tema) {
