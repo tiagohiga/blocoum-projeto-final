@@ -19,8 +19,8 @@ public class ContatoProfissional extends Contato {
 	@Override
 	public void getContato() {
 		String nomeCompleto = nome + sobrenome;
-		System.out.printf("Nome: %s\nTelefone: %s\nE-mail:" + " %s\nEndereço: %s\nCargo: "
-				+ "%s\nSalário: %f\nSetor: %s\nNome Empresa: "
+		System.out.printf("Nome: %s\nTelefone: %s\nE-mail:" + " %s\nEndereï¿½o: %s\nCargo: "
+				+ "%s\nSalario: %f\nSetor: %s\nNome Empresa: "
 				+ " %s",nomeCompleto,telefone,email,endereco,cargo,salario,setor,nomeEmpresa);
 	}
 	

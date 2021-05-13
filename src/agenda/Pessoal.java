@@ -22,7 +22,7 @@ public class Pessoal extends Contato {
 	public void getContato(){
 		String nomeCompleto = nome + sobrenome;
 		
-		System.out.printf("Nome: %s\nTelefone: %s\nE-mail: %s\nEndereço: "
+		System.out.printf("Nome: %s\nTelefone: %s\nE-mail: %s\nEndereï¿½o: "
 				+ "%s\nIdade: %d\nSexo: %s\nRede "
 				+ "Social: %s",nomeCompleto, telefone,email,endereco,idade,sexo,redesocial);
 	}
@@ -31,7 +31,7 @@ public class Pessoal extends Contato {
 		idade = in.nextInt();
 		while(idade<=0 || idade>110)
 		{
-			System.out.printf("\nIDADE INVÁLIDA! Insira novamente!");
+			System.out.printf("\nIDADE INVï¿½LIDA! Insira novamente!");
 			idade = in.nextInt();
 		}
 		setIdade(idade);
@@ -40,7 +40,7 @@ public class Pessoal extends Contato {
 	public void verificaRS(String redesocial) {
 		int validaRS = redesocial.indexOf(".");
 		while(validaRS == -1) {
-			System.out.println("***********\nRede Social inválida, insira um site!\n***************");
+			System.out.println("***********\nRede Social invalida, insira um site!\n***************");
 			redesocial = in.nextLine();
 			validaRS = redesocial.indexOf(".");
 		}
