@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Menu {
 	Scanner ler = new Scanner(System.in);
-	
+	Scanner in = new Scanner(System.in);
 	List<Eventos> eventos = new ArrayList<Eventos>();
 	List<Pessoal> cPoessoal = new ArrayList<Pessoal>();
 	List<ContatoProfissional> cProfissional = new ArrayList<ContatoProfissional>();
@@ -22,15 +22,15 @@ public class Menu {
 	}
 	
 	public void escolherEntrada() {
-		int op;
+		int opcao;
 		do {
 			System.out.printf("\n\tInforme a opção desejada\n");
 			System.out.printf("\t1. Contato Pessoal\n");
 			System.out.printf("\t2. Contato Profissional\n");
 			System.out.printf("\t3. Evento\n");
 			System.out.printf("\t0. Sair\n");
-			op = ler.nextInt();
-			switch(op) {
+			opcao = in.nextInt();
+			switch(opcao) {
 				case 1:
 					manipularContatoPessoal();
 					break;
@@ -42,9 +42,9 @@ public class Menu {
 					break;
 				default:
 					System.out.printf("\nFinalizando...");
-					
+					System.exit(0);
 			}
-		} while(op != 0);
+		} while(opcao != 0);
 	}
 	
 	public void manipularContatoProfissional() {
