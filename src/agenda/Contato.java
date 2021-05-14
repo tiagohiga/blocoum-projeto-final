@@ -4,22 +4,24 @@ import java.util.*;
 public abstract class Contato {
 	Scanner in = new Scanner(System.in);
 	
+
 	protected String nome;
 	protected String sobrenome;
 	protected String tipo;
 	protected String telefone;
 	protected String email;
 	protected String endereco;
-	protected int id;
+
 	
 	abstract public void setContato();
 	abstract public void getContato();
+	
 
 	//buscarContato
 	//excluirContato
 	//definir tipo Date
 	
-	//Sigestões: bloquearContato, favoritarContanto
+	
 	
 	public Contato(String nome, String telefone) {
 		
@@ -38,13 +40,13 @@ public abstract class Contato {
 	/*public void visualizarContato() {
 		String nomeCompleto = this.nome + this.sobrenome;
 		System.out.printf("Nome: %s\nTelefone: %s\nE-mail:"
-				+ " %s\nEndere�o: %s\n",nomeCompleto,telefone,email,endereco);
+				+ " %s\nEndereï¿½o: %s\n",nomeCompleto,telefone,email,endereco);
 	}*/
 	
 	public void verificaEmail(String email) {
 		int validaEmail = email.indexOf("@");
 		while(validaEmail == -1) {
-			System.out.println("***********\nE-mail invalido, verifique se possui o @\n***************");
+			System.out.println("***********\nE-mail inválido, verifique se possui o @\n***************");
 			email = in.nextLine();
 			validaEmail = email.indexOf("@");
 		}
@@ -53,7 +55,7 @@ public abstract class Contato {
 	
 	public void verificaTelefone(String telefone) {
 		while(telefone.length() != 12) {
-			System.out.println("**********\nTelefone Invalido, digite novamente!!!!\n************");
+			System.out.println("**********\nTelefone Inválido, digite novamente!!!!\n************");
 			telefone = in.nextLine();
 		}
 		setTelefone(telefone);
@@ -61,7 +63,7 @@ public abstract class Contato {
 
 	public void verificaString(String nome) {
 		while(nome.isEmpty()) {
-			System.out.println("Este campo está vázio, por favro digite algo!!!!");
+			System.out.println("Este campo está vazio, por favro digite algo!!!!");
 			nome = in.nextLine();
 		}
 		setNome(nome);
@@ -73,6 +75,7 @@ public abstract class Contato {
 		return nome;
 	}
 
+	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
@@ -81,6 +84,10 @@ public abstract class Contato {
 		return sobrenome;
 	}
 
+	public String getNomeCompleto() {
+		return  nome + " " + sobrenome;
+	}
+	
 	public void setSobrenome(String sobrenome) {
 		this.sobrenome = sobrenome;
 	}

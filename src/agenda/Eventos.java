@@ -1,5 +1,6 @@
 package agenda;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Eventos extends Contato{
 	private int duracao;
@@ -25,8 +26,9 @@ public class Eventos extends Contato{
 		System.out.println("Qual o endereço do eventos?");
 		setEndereco(leia.nextLine());
 		System.out.println("Qual a duração, em horas, do eventos?");
-		this.setDuracao(leia.nextInt());
-		System.out.println("Informe o horário de início do evento (hh:mm:ss):");
+		//this.setDuracao(leia.nextInt());
+		validarInt();
+		System.out.println("Informe o horário de início do evento (hhmmss):");
 		validarHora(leia.nextInt());
 		leia.nextLine();
 		System.out.println("Qual o tema do evento?");
@@ -46,6 +48,25 @@ public class Eventos extends Contato{
 		if(tema.isBlank() || tema.isEmpty()) msg = "não tem tema definido";
 		else msg = tema;
 		return msg;
+	}
+	
+	public void validarInt() {
+		int i = -1;
+		boolean erro = true;
+		do
+		{
+			try
+			{
+				int numero = leia.nextInt();
+				erro = false;
+				
+			} catch(InputMismatchException inputMismatchException) {
+				System.out.println("\nVocê deve entrar com um valor do tipo inteiro.\n");
+				leia.nextLine();
+				
+			}
+		} while(erro);
+		this.setDuracao(i);
 	}
 	
 	public String formatarHora(int horas) {
